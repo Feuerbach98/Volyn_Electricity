@@ -6,12 +6,15 @@
   "keywords": [
     ""
   ],
+  "homepage": "https://Feuerbach98.github.io/Volyn_Electricity",
   "license": "",
   "author": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open --config webpack.config.dev.js",
-    "build": "webpack --config webpack.config.prod.js"
+    "build": "webpack --config webpack.config.prod.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
@@ -20,5 +23,8 @@
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.4",
     "webpack-merge": "^5.10.0"
+  },
+  "dependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
